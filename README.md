@@ -27,4 +27,4 @@ Esta biblioteca oferece um middleware que pode ser utilizado para adicionar regr
 Adicione o pacote ao seu projeto Laravel via Composer:
 
 ```bash
-composer require arthur/lib-config-middleware
+composer require lewnelin/lib-config-middleware

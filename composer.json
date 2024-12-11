@@ -1,5 +1,5 @@
 {
-    "name": "arthur/lib-config-middleware",
+    "name": "lewnelin/lib-config-middleware",
     "description": "Library that applies middleware rules to all routes consuming the configuration module API",
     "type": "library",
     "license": "EULA",
@@ -9,7 +9,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Arthur\\LibConfigMiddleware\\": "src/"
+            "Lewnelin\\LibConfigMiddleware\\": "src/"
         }
     },
     "authors": [
@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Arthur\\LibConfigMiddleware\\MiddlewareServiceProvider"
+                "Lewnelin\\LibConfigMiddleware\\MiddlewareServiceProvider"
             ]
         }
     },
