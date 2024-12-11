@@ -1,4 +1,4 @@
-# Arthur Lib Config Middleware
+# Lib Config Middleware
 
 
 [![Packagist](https://img.shields.io/packagist/v/arthur/lib-config-middleware.svg?style=flat-square)](https://packagist.org/packages/arthur/lib-config-middleware)
