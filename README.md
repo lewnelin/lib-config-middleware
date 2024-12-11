@@ -1,8 +1,8 @@
 # Lib Config Middleware
 
 
-[![Packagist](https://img.shields.io/packagist/v/arthur/lib-config-middleware.svg?style=flat-square)](https://packagist.org/packages/arthur/lib-config-middleware)
-[![License](https://img.shields.io/packagist/l/arthur/lib-config-middleware.svg?style=flat-square)](https://packagist.org/packages/arthur/lib-config-middleware)
+[![Packagist](https://img.shields.io/packagist/v/lewnelin/lib-config-middleware.svg?style=flat-square)](https://packagist.org/packages/arthur/lib-config-middleware)
+[![License](https://img.shields.io/packagist/l/lewnelin/lib-config-middleware.svg?style=flat-square)](https://packagist.org/packages/arthur/lib-config-middleware)
 
 A Laravel middleware library that applies configuration rules to all routes consuming the configuration module API.
 
