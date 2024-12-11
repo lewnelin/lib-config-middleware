@@ -2,7 +2,7 @@
     "name": "lewnelin/lib-config-middleware",
     "description": "Library that applies middleware rules to all routes consuming the configuration module API",
     "type": "library",
-    "license": "EULA",
+    "license": "proprietary",
     "require": {
         "laravel/framework": "^11.35",
         "stancl/tenancy": "^3.8"
