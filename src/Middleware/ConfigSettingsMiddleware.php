@@ -1,6 +1,6 @@
 <?php
 
-namespace SeuNamespace\Middleware;
+namespace Lewnelin\LibConfigMiddleware\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;

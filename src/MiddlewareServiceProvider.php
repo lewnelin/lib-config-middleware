@@ -1,6 +1,6 @@
 <?php
 
-namespace SeuNamespace;
+namespace Lewnelin\LibConfigMiddleware;
 
 use Illuminate\Support\ServiceProvider;
 
