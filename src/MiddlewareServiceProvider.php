@@ -8,8 +8,6 @@ class MiddlewareServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        $this->publishes([
-            __DIR__.'/../database/migrations/' => database_path('migrations'),
-        ], 'middleware-migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations/');
     }
 }
