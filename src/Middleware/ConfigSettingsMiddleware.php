@@ -3,13 +3,18 @@
 namespace Lewnelin\LibConfigMiddleware\Middleware;
 
 use Closure;
-use Illuminate\Http\Request;
 use Stancl\Tenancy\Middleware\InitializeTenancyByDomainOrSubdomain;
-
 
 class ConfigSettingsMiddleware extends InitializeTenancyByDomainOrSubdomain
 {
-    public function handle(Request $request, Closure $next)
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @return mixed
+     */
+    public function handle($request, Closure $next)
     {
         // Chama o middleware pai para inicializar a tenancy
         parent::handle($request, $next);
