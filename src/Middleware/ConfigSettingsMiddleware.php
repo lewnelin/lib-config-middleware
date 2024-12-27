@@ -25,7 +25,5 @@ class ConfigSettingsMiddleware extends InitializeTenancyByDomainOrSubdomain
         if (!$tenant || !$tenant->active) {
             return response()->json(['message' => 'Serviço suspenso. Contate a prefeitura.'], 403);
         }
-
-        return $next($request);
     }
 }
