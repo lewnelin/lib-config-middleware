@@ -3,7 +3,9 @@
 namespace Lewnelin\LibConfigMiddleware\Middleware;
 
 use Closure;
+use Stancl\Tenancy\Middleware\InitializeTenancyByDomain;
 use Stancl\Tenancy\Middleware\InitializeTenancyByDomainOrSubdomain;
+use Stancl\Tenancy\Middleware\InitializeTenancyBySubdomain;
 
 class ConfigSettingsMiddleware extends InitializeTenancyByDomainOrSubdomain
 {
@@ -16,8 +18,11 @@ class ConfigSettingsMiddleware extends InitializeTenancyByDomainOrSubdomain
      */
     public function handle($request, Closure $next)
     {
-        // Chama o middleware pai para inicializar a tenancy
-        parent::handle($request, $next);
+        if ($this->isSubdomain($request->getHost())) {
+            $tenancy = app(InitializeTenancyBySubdomain::class)->handle($request, $next);
+        } else {
+            $tenancy = app(InitializeTenancyByDomain::class)->handle($request, $next);
+        }
 
         // Verifica o status do cliente
         $tenant = tenant();
@@ -25,5 +30,7 @@ class ConfigSettingsMiddleware extends InitializeTenancyByDomainOrSubdomain
         if (!$tenant || !$tenant->active) {
             return response()->json(['message' => 'Serviço suspenso. Contate a prefeitura.'], 403);
         }
+
+        return $tenancy;
     }
 }
