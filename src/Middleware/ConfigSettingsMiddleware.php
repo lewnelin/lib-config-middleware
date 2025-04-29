@@ -18,19 +18,13 @@ class ConfigSettingsMiddleware extends InitializeTenancyByDomainOrSubdomain
      */
     public function handle($request, Closure $next)
     {
-        if ($this->isSubdomain($request->getHost())) {
-            $tenancy = app(InitializeTenancyBySubdomain::class)->handle($request, $next);
-        } else {
-            $tenancy = app(InitializeTenancyByDomain::class)->handle($request, $next);
-        }
+        $response = parent::handle($request, $next);
 
-        // Verifica o status do cliente
         $tenant = tenant();
-
         if (!$tenant || !$tenant->active) {
             return response()->json(['message' => 'Serviço suspenso. Contate a prefeitura.'], 403);
         }
 
-        return $tenancy;
+        return $response;
     }
 }
