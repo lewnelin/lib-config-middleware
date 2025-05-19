@@ -4,8 +4,8 @@
     "type": "library",
     "license": "proprietary",
     "require": {
-        "laravel/framework": "^11.35",
-        "stancl/tenancy": "^3.8"
+        "laravel/framework": "^10.00",
+        "stancl/tenancy": "^3.6"
     },
     "autoload": {
         "psr-4": {
